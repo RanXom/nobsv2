@@ -1,16 +1,16 @@
 # 🚀 NO BS Spring Boot Guide (v2) — `nobsv2`
 
-This project is part of a hands-on, no-fluff tutorial series on Spring Boot, guided by [PeachezProgramming](https://www.youtube.com/@peachezprogramming). It's a **work-in-progress** backend project using Spring Boot 3+ and MariaDB as the database.
+This project is part of a hands-on, no-fluff tutorial series on Spring Boot, guided by [Peachez Programming](https://www.youtube.com/@peachezprogramming). It's a **work-in-progress** backend project using Spring Boot 3+ and MariaDB as the database.
 
 ---
 
 ## 📦 Tech Stack
 
-- ☕ Java (JDK 17 or later)
+- ☕ Java (JDK 17)
 - ⚙️ Spring Boot
 - 🐬 MariaDB (local)
 - 🐧 Fedora Linux
-- 🛠️ Maven (or Gradle, if using it)
+- 🛠️ Maven
 
 ---
 
@@ -19,7 +19,7 @@ This project is part of a hands-on, no-fluff tutorial series on Spring Boot, gui
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/<your-username>/nobsv2.git
+git clone https://github.com/RanXom/nobsv2.git
 cd nobsv2
 ```
 
@@ -53,19 +53,16 @@ spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MariaDBDialect
 ```
 
-> ❗ **Note:** This file is ignored in Git. Do not commit sensitive data.
-
 ---
 
 ## 🏃 Running the Project
+> ***Use IntelliJ IDEA (Recommended).***
 
-Run using Spring Boot CLI or your IDE:
+or Run using Spring Boot CLI :
 
 ```bash
 ./mvnw spring-boot:run
 ```
-
-Or via an IDE like IntelliJ or VS Code by running the `Nobsv2Application.java` main class.
 
 ---
 
