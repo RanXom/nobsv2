@@ -17,4 +17,11 @@ public class GlobalExceptionHandler {
         return new ErrorResponse(e.getMessage());
     }
 
+    @ExceptionHandler(ProductNotValidException.class)
+    @ResponseBody
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public ErrorResponse handleProductNotValidException(ProductNotValidException e) {
+        return new ErrorResponse(e.getMessage());
+    }
+
 }
