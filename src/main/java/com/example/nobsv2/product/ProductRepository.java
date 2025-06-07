@@ -15,6 +15,6 @@ public interface ProductRepository extends JpaRepository<Product, Integer> {
     List<Product> findByNameContaining(String name);
 
     // JPQL
-    @Query("SELECT p FROM Product p WHERE p.name LIKE %:keyword% OR p.description LIKE %:keyword%")
-    List<Product> findByNameOrDescriptionContaining(@Param("keyword") String name);
+    @Query("SELECT p FROM Product p WHERE LOWER(p.name) LIKE LOWER(CONCAT('%', :keyword, '%')) OR LOWER(p.description) LIKE LOWER(CONCAT('%', :keyword, '%'))")
+    List<Product> findByNameOrDescriptionContaining(@Param("keyword") String keyword);
 }
